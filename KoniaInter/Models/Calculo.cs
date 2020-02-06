@@ -11,18 +11,22 @@ namespace KoniaInter.Models
         public double valor2 { get; set; }
         public string operacao { get; set; }
 
+
+        //Pode ser que o método esteja quebrado!
         public double CalculaValores(Calculo calculo)
         {
             double total = 0;
-            if (calculo.operacao == "+")
-                total = calculo.valor1 + calculo.valor2;
+            double totalSoma = 0;
+            double totalSubtracao = 0;
 
-            else if (calculo.operacao == "-")
-                total = calculo.valor1 - calculo.valor2;
-            else if (calculo.operacao == "*")
-                total = calculo.valor1 * calculo.valor2;
-            else if (calculo.operacao == "/")
-                total = calculo.valor1 / calculo.valor2;
+            if (calculo.operacao == "+")
+                total = calculo.valor1 + calculo.valor1;
+            if (calculo.operacao == "-")
+                total = calculo.valor1 - calculo.valor1;
+            if (calculo.operacao == "*")
+                totalSubtracao = calculo.valor1 * calculo.valor1;
+            if (calculo.operacao == "/")
+                total = calculo.valor1 + calculo.valor1;
 
             return total;
         }

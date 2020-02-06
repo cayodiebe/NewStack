@@ -27,17 +27,6 @@ namespace KoniaInter.Controllers
         {
             return View();
         }
-        public IActionResult Calculo()
-        {
-            Calculo calculo = new Calculo();
-
-            calculo.valor2 = 10;
-            calculo.valor1 = 10;
-            calculo.operacao = "+";
-            ViewData["Total"] = calculo.CalculaValores(calculo);
-            return View();
-        }
-
         //##Será Necessário Criar uma nova IAccountResult para a Home de Calculo##
 
 
